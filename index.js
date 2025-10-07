@@ -225,7 +225,7 @@ console.log(chalk.bold.redBright(`\n⚠︎ Conexión cerrada, conectese nuevamen
 }}}
 process.on('uncaughtException', console.error)
 let isInit = true
-let handler = await import('./handler.js')
+let handler = await import('./Nagisystem/handler.js')
 global.reloadHandler = async function(restatConn) {
 try {
 const Handler = await import(`./handler.js?update=${Date.now()}`).catch(console.error);
